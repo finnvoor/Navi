@@ -1,0 +1,190 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Read version and set build number
+        id: version
+        run: |
+          VERSION=$(sed -n 's/.*MARKETING_VERSION = \(.*\);/\1/p' Navi.xcodeproj/project.pbxproj | head -1 | tr -d ' ')
+          BUILD=$(git rev-list --count HEAD)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "build=$BUILD" >> "$GITHUB_OUTPUT"
+          echo "Building version $VERSION ($BUILD)"
+
+      - name: Import signing certificate
+        env:
+          APPLE_CERTIFICATE_P12: ${{ secrets.APPLE_CERTIFICATE_P12 }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+        run: |
+          set -euo pipefail
+          KEYCHAIN=build.keychain
+          echo "$APPLE_CERTIFICATE_P12" | base64 --decode > cert.p12
+          security create-keychain -p "" "$KEYCHAIN"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN"
+          security unlock-keychain -p "" "$KEYCHAIN"
+          security import cert.p12 -k "$KEYCHAIN" -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+          security list-keychains -d user -s "$KEYCHAIN"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "" "$KEYCHAIN"
+          rm cert.p12
+
+      - name: Configure notarytool
+        env:
+          APPLE_API_KEY_ID: ${{ secrets.APPLE_API_KEY_ID }}
+          APPLE_API_ISSUER_ID: ${{ secrets.APPLE_API_ISSUER_ID }}
+          APPLE_API_PRIVATE_KEY_B64: ${{ secrets.APPLE_API_PRIVATE_KEY_B64 }}
+          NOTARY_PROFILE: release
+        run: |
+          set -euo pipefail
+          mkdir -p ~/private_keys
+          echo "$APPLE_API_PRIVATE_KEY_B64" | base64 --decode > ~/private_keys/AuthKey_${APPLE_API_KEY_ID}.p8
+          xcrun notarytool store-credentials "$NOTARY_PROFILE" \
+            --key-id "$APPLE_API_KEY_ID" \
+            --issuer "$APPLE_API_ISSUER_ID" \
+            --key ~/private_keys/AuthKey_${APPLE_API_KEY_ID}.p8
+
+      - name: Setup mise
+        uses: jdx/mise-action@v2
+
+      - name: Resolve SPM dependencies
+        run: xcodebuild -resolvePackageDependencies -project Navi.xcodeproj -scheme 'Navi macOS'
+
+      - name: Archive
+        run: |
+          xcodebuild archive \
+            -project Navi.xcodeproj \
+            -scheme 'Navi macOS' \
+            -configuration Release \
+            -archivePath build/Navi.xcarchive \
+            CURRENT_PROJECT_VERSION=${{ steps.version.outputs.build }} \
+            CODE_SIGN_IDENTITY=- \
+            CODE_SIGN_STYLE=Manual
+
+      - name: Export
+        run: |
+          cat > build/ExportOptions.plist << 'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>developer-id</string>
+            <key>teamID</key>
+            <string>${{ vars.APPLE_TEAM_ID }}</string>
+          </dict>
+          </plist>
+          PLIST
+
+          xcodebuild -exportArchive \
+            -archivePath build/Navi.xcarchive \
+            -exportOptionsPlist build/ExportOptions.plist \
+            -exportPath build/export \
+            -allowProvisioningUpdates \
+            -authenticationKeyID "${{ secrets.APPLE_API_KEY_ID }}" \
+            -authenticationKeyIssuerID "${{ secrets.APPLE_API_ISSUER_ID }}" \
+            -authenticationKeyPath ~/private_keys/AuthKey_${{ secrets.APPLE_API_KEY_ID }}.p8
+
+      - name: Package
+        run: |
+          APP=$(find build/export -name "*.app" -maxdepth 1 | head -1)
+          ditto -c -k --keepParent "$APP" build/Navi.zip
+
+      - name: Notarize
+        run: |
+          xcrun notarytool submit build/Navi.zip \
+            --keychain-profile release \
+            --wait
+          APP=$(find build/export -name "*.app" -maxdepth 1 | head -1)
+          xcrun stapler staple "$APP"
+          # Re-zip after stapling
+          rm build/Navi.zip
+          ditto -c -k --keepParent "$APP" build/Navi.zip
+
+      - name: Sign for Sparkle
+        id: sparkle
+        env:
+          SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
+        run: |
+          set -euo pipefail
+          SIGN_UPDATE=$(find ~/Library/Developer/Xcode/DerivedData -path "*/Sparkle/sign_update" -type f 2>/dev/null | head -1)
+          if [ -z "$SIGN_UPDATE" ]; then
+            SIGN_UPDATE=$(find build/Navi.xcarchive -path "*/sign_update" -type f 2>/dev/null | head -1)
+          fi
+          if [ -z "$SIGN_UPDATE" ]; then
+            echo "sign_update not found, building from SPM cache..."
+            SPARKLE_SRC=$(find ~/Library/Developer/Xcode/DerivedData -path "*/checkouts/Sparkle" -maxdepth 5 -type d 2>/dev/null | head -1)
+            swift build --package-path "$SPARKLE_SRC" --product sign_update
+            SIGN_UPDATE=$(find "$SPARKLE_SRC" -path "*/.build/*/sign_update" -type f | head -1)
+          fi
+          OUTPUT=$("$SIGN_UPDATE" build/Navi.zip --ed-key-file <(echo "$SPARKLE_PRIVATE_KEY"))
+          echo "sparkle_signature<<EOF" >> "$GITHUB_OUTPUT"
+          echo "$OUTPUT" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+          LENGTH=$(stat -f%z build/Navi.zip)
+          echo "length=$LENGTH" >> "$GITHUB_OUTPUT"
+
+          # Extract edSignature value
+          ED_SIG=$(echo "$OUTPUT" | sed -n 's/.*sparkle:edSignature="\([^"]*\)".*/\1/p')
+          echo "ed_signature=$ED_SIG" >> "$GITHUB_OUTPUT"
+
+      - name: Update appcast
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          BUILD: ${{ steps.version.outputs.build }}
+          ED_SIGNATURE: ${{ steps.sparkle.outputs.ed_signature }}
+          LENGTH: ${{ steps.sparkle.outputs.length }}
+        run: |
+          set -euo pipefail
+          DATE=$(date -R)
+          DOWNLOAD_URL="https://github.com/finnvoor/Navi/releases/download/v${VERSION}/Navi.zip"
+
+          python3 -c "
+          import sys
+          appcast = open('appcast.xml').read()
+          item = '''    <item>
+              <title>Version ${VERSION}</title>
+              <pubDate>${DATE}</pubDate>
+              <enclosure
+                url=\"${DOWNLOAD_URL}\"
+                sparkle:version=\"${BUILD}\"
+                sparkle:shortVersionString=\"${VERSION}\"
+                sparkle:edSignature=\"${ED_SIGNATURE}\"
+                length=\"${LENGTH}\"
+                type=\"application/octet-stream\"
+              />
+            </item>
+          '''
+          appcast = appcast.replace('</channel>', item + '  </channel>')
+          open('appcast.xml', 'w').write(appcast)
+          "
+
+      - name: Commit appcast
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add appcast.xml
+          git commit -m "Update appcast for v${{ steps.version.outputs.version }}"
+          git push
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          gh release create "v${VERSION}" \
+            --title "Navi v${VERSION}" \
+            --generate-notes \
+            build/Navi.zip

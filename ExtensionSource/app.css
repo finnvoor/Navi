@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@assistant-ui/react-markdown/styles/dot.css";
+
+@source "./app.jsx";
+@source "./components/**/*.{js,jsx}";
+@source "./lib/**/*.{js,jsx}";
+
+@theme {
+    --font-sans: "SF Pro Display", "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+    --color-background: #f5f5f7;
+    --color-foreground: #1d1d1f;
+    --color-card: #ffffff;
+    --color-card-foreground: #1d1d1f;
+    --color-popover: #ffffff;
+    --color-popover-foreground: #1d1d1f;
+    --color-primary: #1d1d1f;
+    --color-primary-foreground: #f5f5f7;
+    --color-secondary: #e8e8ed;
+    --color-secondary-foreground: #2c2c2e;
+    --color-muted: #ebebf0;
+    --color-muted-foreground: #6e6e73;
+    --color-accent: #e5e5ea;
+    --color-accent-foreground: #1d1d1f;
+    --color-border: rgba(0, 0, 0, 0.08);
+    --color-input: rgba(0, 0, 0, 0.09);
+    --color-ring: rgba(0, 0, 0, 0.26);
+    --color-destructive: #ff3b30;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    :root {
+        --navi-viewport-height: 100vh;
+        --navi-viewport-offset-top: 0px;
+        --navi-viewport-offset-left: 0px;
+    }
+
+    html {
+        overflow: hidden;
+        overscroll-behavior: none;
+        background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
+            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+    }
+
+    body {
+        @apply min-h-0 overflow-hidden bg-background font-sans text-foreground antialiased;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        margin: 0;
+        overscroll-behavior: none;
+        background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
+            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: env(safe-area-inset-bottom, 0px);
+        pointer-events: none;
+        background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
+            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+    }
+
+    body,
+    #root {
+        width: 100%;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    #root {
+        flex: 1 1 auto;
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        max-height: 100%;
+        box-sizing: border-box;
+        overscroll-behavior: none;
+        background:
+            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
+            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+    }
+
+    html[data-platform="ios"] {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        min-width: 0;
+    }
+
+    html[data-platform="ios"] body {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        min-width: 0;
+        height: var(--navi-viewport-height);
+        max-height: var(--navi-viewport-height);
+    }
+
+    html[data-platform="ios"] #root {
+        width: 100%;
+        min-width: 0;
+        height: var(--navi-viewport-height);
+        max-height: var(--navi-viewport-height);
+        transform: translate3d(var(--navi-viewport-offset-left), var(--navi-viewport-offset-top), 0);
+        transform-origin: top left;
+        will-change: transform;
+    }
+
+    html[data-platform="sidebar"] {
+        width: 100%;
+        min-width: 0;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    html[data-platform="sidebar"] body {
+        width: 100%;
+        min-width: 0;
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    html[data-platform="sidebar"] #root {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    button,
+    input,
+    textarea,
+    summary {
+        font: inherit;
+    }
+
+    textarea {
+        field-sizing: content;
+    }
+}
+
+@layer utilities {
+    .shimmer {
+        position: relative;
+        color: transparent;
+        background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.72) 50%, transparent 100%);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: shimmer-slide 1.4s linear infinite;
+    }
+}
+
+@keyframes shimmer-slide {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}

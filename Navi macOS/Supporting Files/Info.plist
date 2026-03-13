@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Navi</string>
+	<key>SUFeedURL</key>
+	<string>https://raw.githubusercontent.com/finnvoor/Navi/main/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>sEQrDWzsa2yvv1bc1EsyCgppN7O/fztuV2AHs7/3+OE=</string>
+	<key>SUEnableInstallerLauncher</key>
+	<true/>
+</dict>
+</plist>

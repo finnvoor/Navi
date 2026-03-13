@@ -1,0 +1,37 @@
+[tools]
+bun = "latest"
+xcbeautify = "latest"
+
+[tasks.format]
+description = "Format Swift and JavaScript source files"
+run = """
+swiftformat .
+bunx biome format --write
+"""
+
+[tasks."build:extension"]
+description = "Bundle extension JS/CSS/HTML resources"
+run = "bun install --frozen-lockfile && bun Scripts/build-extension-resources.mjs {{arg(i=0)}} {{arg(i=1)}}"
+
+[tasks."build:macos"]
+description = "Build the macOS app"
+run = """
+bun install --frozen-lockfile
+xcodebuild -project Navi.xcodeproj -scheme 'Navi macOS' -configuration Debug build 2>&1 | xcbeautify --disable-logging
+"""
+
+[tasks.version]
+description = "Set the marketing version across all targets"
+usage = "version <version>"
+run = """
+sed -i '' "s/MARKETING_VERSION = .*;/MARKETING_VERSION = {{arg(i=0, name="version")}};/g" Navi.xcodeproj/project.pbxproj
+sed -i '' 's/"version": ".*"/"version": "{{arg(i=0, name="version")}}"/' ExtensionSource/manifest.json
+echo "Set version to {{arg(i=0, name="version")}}"
+"""
+
+[tasks."build:ios"]
+description = "Build the iOS app"
+run = """
+bun install --frozen-lockfile
+xcodebuild -project Navi.xcodeproj -scheme 'Navi iOS' -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | xcbeautify --disable-logging
+"""

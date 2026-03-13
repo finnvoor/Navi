@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E0DA0942F6498C20070DA85 /* Navi macOS Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6E0DA0932F6498C20070DA85 /* Navi macOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E1EBEDA2F6AFD5B000B0BDE /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 9A6000022F6A00000070DA85 /* Sparkle */; };
+		6E1EC2112F6B120F000B0BDE /* Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EC20F2F6B118B000B0BDE /* Icon.icon */; };
+		6E1EC2132F6B1217000B0BDE /* Icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 6E1EC20F2F6B118B000B0BDE /* Icon.icon */; };
+		7E1000012F6500000070DA85 /* Navi iOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7E1000072F6500000070DA85 /* Navi iOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A4000012F6800000070DA85 /* NaviKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4000072F6800000070DA85 /* NaviKit */; };
+		9A4000022F6800000070DA85 /* NaviKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4000072F6800000070DA85 /* NaviKit */; };
+		9A4000032F6800000070DA85 /* NaviKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4000072F6800000070DA85 /* NaviKit */; };
+		9A4000042F6800000070DA85 /* NaviKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A4000072F6800000070DA85 /* NaviKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E0DA0952F6498C20070DA85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E0DA0712F6498C00070DA85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E0DA0922F6498C20070DA85;
+			remoteInfo = "Navi macOS Extension";
+		};
+		7E1000042F6500000070DA85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E0DA0712F6498C00070DA85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E10000E2F6500000070DA85;
+			remoteInfo = "Navi iOS Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E0DA0B22F6498C20070DA85 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E0DA0942F6498C20070DA85 /* Navi macOS Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1000052F6500000070DA85 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7E1000012F6500000070DA85 /* Navi iOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E0DA0792F6498C00070DA85 /* Navi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0DA0932F6498C20070DA85 /* Navi macOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Navi macOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E1EC20F2F6B118B000B0BDE /* Icon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = Icon.icon; sourceTree = "<group>"; };
+		7E1000062F6500000070DA85 /* Navi iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Navi iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E1000072F6500000070DA85 /* Navi iOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Navi iOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6E0DA5DE2F65DFAB0070DA85 /* Exceptions for "Navi macOS Extension" folder in "Navi macOS Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+			);
+			target = 6E0DA0922F6498C20070DA85 /* Navi macOS Extension */;
+		};
+		6E0DA5DF2F65DFAD0070DA85 /* Exceptions for "Navi iOS Extension" folder in "Navi iOS Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+			);
+			target = 7E10000E2F6500000070DA85 /* Navi iOS Extension */;
+		};
+		9A6000032F6A00000070DA85 /* Exceptions for "Navi macOS" folder in "Navi macOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Supporting Files/Info.plist",
+			);
+			target = 6E0DA0782F6498C00070DA85 /* Navi macOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6E0DA07B2F6498C00070DA85 /* Navi macOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9A6000032F6A00000070DA85 /* Exceptions for "Navi macOS" folder in "Navi macOS" target */,
+			);
+			path = "Navi macOS";
+			sourceTree = "<group>";
+		};
+		6E0DA0972F6498C20070DA85 /* Navi macOS Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6E0DA5DE2F65DFAB0070DA85 /* Exceptions for "Navi macOS Extension" folder in "Navi macOS Extension" target */,
+			);
+			explicitFolders = (
+				Generated/_locales,
+				Generated/images,
+			);
+			path = "Navi macOS Extension";
+			sourceTree = "<group>";
+		};
+		7E1000092F6500000070DA85 /* Navi iOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Navi iOS";
+			sourceTree = "<group>";
+		};
+		7E10000A2F6500000070DA85 /* Navi iOS Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6E0DA5DF2F65DFAD0070DA85 /* Exceptions for "Navi iOS Extension" folder in "Navi iOS Extension" target */,
+			);
+			explicitFolders = (
+				Generated/_locales,
+				Generated/images,
+			);
+			path = "Navi iOS Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E0DA0762F6498C00070DA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1EBEDA2F6AFD5B000B0BDE /* Sparkle in Frameworks */,
+				9A4000012F6800000070DA85 /* NaviKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0DA0902F6498C20070DA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4000022F6800000070DA85 /* NaviKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E10000B2F6500000070DA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4000032F6800000070DA85 /* NaviKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E10000C2F6500000070DA85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A4000042F6800000070DA85 /* NaviKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E0DA0702F6498C00070DA85 = {
+			isa = PBXGroup;
+			children = (
+				6E1EC20F2F6B118B000B0BDE /* Icon.icon */,
+				6E0DA07B2F6498C00070DA85 /* Navi macOS */,
+				6E0DA0972F6498C20070DA85 /* Navi macOS Extension */,
+				7E1000092F6500000070DA85 /* Navi iOS */,
+				7E10000A2F6500000070DA85 /* Navi iOS Extension */,
+				6E0DA07A2F6498C00070DA85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E0DA07A2F6498C00070DA85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E0DA0792F6498C00070DA85 /* Navi.app */,
+				6E0DA0932F6498C20070DA85 /* Navi macOS Extension.appex */,
+				7E1000062F6500000070DA85 /* Navi iOS.app */,
+				7E1000072F6500000070DA85 /* Navi iOS Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E0DA0782F6498C00070DA85 /* Navi macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0DA0B32F6498C20070DA85 /* Build configuration list for PBXNativeTarget "Navi macOS" */;
+			buildPhases = (
+				6E0DA0752F6498C00070DA85 /* Sources */,
+				6E0DA0762F6498C00070DA85 /* Frameworks */,
+				6E0DA0772F6498C00070DA85 /* Resources */,
+				6E0DA0B22F6498C20070DA85 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E0DA0962F6498C20070DA85 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6E0DA07B2F6498C00070DA85 /* Navi macOS */,
+			);
+			name = "Navi macOS";
+			packageProductDependencies = (
+				9A4000072F6800000070DA85 /* NaviKit */,
+				9A6000022F6A00000070DA85 /* Sparkle */,
+			);
+			productName = "Navi macOS";
+			productReference = 6E0DA0792F6498C00070DA85 /* Navi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E0DA0922F6498C20070DA85 /* Navi macOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E0DA0AD2F6498C20070DA85 /* Build configuration list for PBXNativeTarget "Navi macOS Extension" */;
+			buildPhases = (
+				6E0DA08F2F6498C20070DA85 /* Sources */,
+				9A5000012F6900000070DA85 /* Bundle Extension Resources */,
+				6E0DA0902F6498C20070DA85 /* Frameworks */,
+				6E0DA0912F6498C20070DA85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6E0DA0972F6498C20070DA85 /* Navi macOS Extension */,
+			);
+			name = "Navi macOS Extension";
+			packageProductDependencies = (
+				9A4000072F6800000070DA85 /* NaviKit */,
+			);
+			productName = "Navi macOS Extension";
+			productReference = 6E0DA0932F6498C20070DA85 /* Navi macOS Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7E10000D2F6500000070DA85 /* Navi iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E1000192F6500000070DA85 /* Build configuration list for PBXNativeTarget "Navi iOS" */;
+			buildPhases = (
+				7E1000112F6500000070DA85 /* Sources */,
+				7E10000B2F6500000070DA85 /* Frameworks */,
+				7E10000F2F6500000070DA85 /* Resources */,
+				7E1000052F6500000070DA85 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E1000132F6500000070DA85 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7E1000092F6500000070DA85 /* Navi iOS */,
+			);
+			name = "Navi iOS";
+			packageProductDependencies = (
+				9A4000072F6800000070DA85 /* NaviKit */,
+			);
+			productName = "Navi iOS";
+			productReference = 7E1000062F6500000070DA85 /* Navi iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7E10000E2F6500000070DA85 /* Navi iOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7E1000182F6500000070DA85 /* Build configuration list for PBXNativeTarget "Navi iOS Extension" */;
+			buildPhases = (
+				7E1000122F6500000070DA85 /* Sources */,
+				9A5000022F6900000070DA85 /* Bundle Extension Resources */,
+				7E10000C2F6500000070DA85 /* Frameworks */,
+				7E1000102F6500000070DA85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7E10000A2F6500000070DA85 /* Navi iOS Extension */,
+			);
+			name = "Navi iOS Extension";
+			packageProductDependencies = (
+				9A4000072F6800000070DA85 /* NaviKit */,
+			);
+			productName = "Navi iOS Extension";
+			productReference = 7E1000072F6500000070DA85 /* Navi iOS Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E0DA0712F6498C00070DA85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					6E0DA0782F6498C00070DA85 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					6E0DA0922F6498C20070DA85 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					7E10000D2F6500000070DA85 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					7E10000E2F6500000070DA85 = {
+						CreatedOnToolsVersion = 26.4;
+					};
+				};
+			};
+			buildConfigurationList = 6E0DA0742F6498C00070DA85 /* Build configuration list for PBXProject "Navi" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E0DA0702F6498C00070DA85;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9A4000062F6800000070DA85 /* XCLocalSwiftPackageReference "Packages/NaviKit" */,
+				9A6000012F6A00000070DA85 /* XCRemoteSwiftPackageReference "Sparkle" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6E0DA07A2F6498C00070DA85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E0DA0782F6498C00070DA85 /* Navi macOS */,
+				6E0DA0922F6498C20070DA85 /* Navi macOS Extension */,
+				7E10000D2F6500000070DA85 /* Navi iOS */,
+				7E10000E2F6500000070DA85 /* Navi iOS Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E0DA0772F6498C00070DA85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1EC2112F6B120F000B0BDE /* Icon.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0DA0912F6498C20070DA85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E10000F2F6500000070DA85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1EC2132F6B1217000B0BDE /* Icon.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1000102F6500000070DA85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A5000012F6900000070DA85 /* Bundle Extension Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle Extension Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/background.js",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/content.js",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/popup.js",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/app.css",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/popup.html",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/sidebar.html",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/sidebar.js",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/sidebar-inject.js",
+				"$(PROJECT_DIR)/Navi macOS Extension/Generated/manifest.json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH\"\ncd \"$SRCROOT\"\nmise run build:extension \"$SRCROOT/ExtensionSource\" \"$SRCROOT/$TARGET_NAME/Generated\"\n";
+		};
+		9A5000022F6900000070DA85 /* Bundle Extension Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle Extension Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/background.js",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/content.js",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/popup.js",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/app.css",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/popup.html",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/sidebar.html",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/sidebar.js",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/sidebar-inject.js",
+				"$(PROJECT_DIR)/Navi iOS Extension/Generated/manifest.json",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH\"\ncd \"$SRCROOT\"\nmise run build:extension \"$SRCROOT/ExtensionSource\" \"$SRCROOT/$TARGET_NAME/Generated\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E0DA0752F6498C00070DA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E0DA08F2F6498C20070DA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1000112F6500000070DA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E1000122F6500000070DA85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E0DA0962F6498C20070DA85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E0DA0922F6498C20070DA85 /* Navi macOS Extension */;
+			targetProxy = 6E0DA0952F6498C20070DA85 /* PBXContainerItemProxy */;
+		};
+		7E1000132F6500000070DA85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7E10000E2F6500000070DA85 /* Navi iOS Extension */;
+			targetProxy = 7E1000042F6500000070DA85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6E0DA0AE2F6498C20070DA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Navi macOS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6E0DA0AF2F6498C20070DA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Navi macOS Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6E0DA0B02F6498C20070DA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E0DA0B12F6498C20070DA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6E0DA0B42F6498C20070DA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Navi;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi;
+				PRODUCT_NAME = Navi;
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6E0DA0B52F6498C20070DA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Navi;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi;
+				PRODUCT_NAME = Navi;
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7E1000142F6500000070DA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Navi iOS Extension";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E1000152F6500000070DA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Navi iOS Extension";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E1000162F6500000070DA85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Navi;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7E1000172F6500000070DA85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(TARGET_NAME)/Supporting Files/Navi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YF6GMG9Q86;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Navi;
+				INFOPLIST_KEY_LSRequiresIPhoneOS = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnvoorhees.Navi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E0DA0742F6498C00070DA85 /* Build configuration list for PBXProject "Navi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0DA0B02F6498C20070DA85 /* Debug */,
+				6E0DA0B12F6498C20070DA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0DA0AD2F6498C20070DA85 /* Build configuration list for PBXNativeTarget "Navi macOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0DA0AE2F6498C20070DA85 /* Debug */,
+				6E0DA0AF2F6498C20070DA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E0DA0B32F6498C20070DA85 /* Build configuration list for PBXNativeTarget "Navi macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0DA0B42F6498C20070DA85 /* Debug */,
+				6E0DA0B52F6498C20070DA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E1000182F6500000070DA85 /* Build configuration list for PBXNativeTarget "Navi iOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1000142F6500000070DA85 /* Debug */,
+				7E1000152F6500000070DA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7E1000192F6500000070DA85 /* Build configuration list for PBXNativeTarget "Navi iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E1000162F6500000070DA85 /* Debug */,
+				7E1000172F6500000070DA85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9A4000062F6800000070DA85 /* XCLocalSwiftPackageReference "Packages/NaviKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/NaviKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9A6000012F6A00000070DA85 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9A4000072F6800000070DA85 /* NaviKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NaviKit;
+		};
+		9A6000022F6A00000070DA85 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A6000012F6A00000070DA85 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6E0DA0712F6498C00070DA85 /* Project object */;
+}

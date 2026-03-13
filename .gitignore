@@ -1,0 +1,14 @@
+# Build artifacts
+.build/
+Navi macOS Extension/Generated/
+Navi iOS Extension/Generated/
+
+# Dependencies
+node_modules/
+
+# Xcode
+xcuserdata/
+*.xcscmblueprint
+
+# macOS
+.DS_Store
