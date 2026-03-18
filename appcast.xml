@@ -5,5 +5,29 @@
     <link>https://github.com/finnvoor/Navi</link>
     <description>Navi updates</description>
     <language>en</language>
+    <item>
+      <title>Version 0.1.0</title>
+      <pubDate>Wed, 18 Mar 2026 18:39:01 +0000</pubDate>
+      <enclosure
+        url="https://github.com/finnvoor/Navi/releases/download/v0.1.0/Navi.zip"
+        sparkle:version="3"
+        sparkle:shortVersionString="0.1.0"
+        sparkle:edSignature="rbdknVdTT2asBZwnsUdr37jLCUHh+6fAOHGZH5Rc/ifWKySkBqVEDNhSgmPmyKdalfqm0mvx+JnHFKHsGBU9Dg=="
+        length="4358870"
+        type="application/octet-stream"
+      />
+    </item>
+    <item>
+      <title>Version 0.1.1</title>
+      <pubDate>Wed, 18 Mar 2026 18:45:32 +0000</pubDate>
+      <enclosure
+        url="https://github.com/finnvoor/Navi/releases/download/v0.1.1/Navi.zip"
+        sparkle:version="3"
+        sparkle:shortVersionString="0.1.1"
+        sparkle:edSignature="EdIt6AWH410A/TkSWTTaa6OGe9WLMUFYZ92LzEH67w17tkWun+dRBNHrAU630MVqRi39rnyaT79bEjFT3tMFCA=="
+        length="4358874"
+        type="application/octet-stream"
+      />
+    </item>
   </channel>
 </rss>

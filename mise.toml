@@ -35,3 +35,7 @@ run = """
 bun install --frozen-lockfile
 xcodebuild -project Navi.xcodeproj -scheme 'Navi iOS' -configuration Debug -destination 'generic/platform=iOS Simulator' build 2>&1 | xcbeautify --disable-logging
 """
+
+[tasks."release:macos"]
+description = "Build, notarize, publish, and appcast the macOS release from a local Mac"
+run = "./Scripts/release-macos.sh {{arg(i=0, name=\"version\")}}"

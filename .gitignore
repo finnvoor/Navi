@@ -1,5 +1,6 @@
 # Build artifacts
 .build/
+build/
 Navi macOS Extension/Generated/
 Navi iOS Extension/Generated/
 
