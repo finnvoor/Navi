@@ -26,6 +26,9 @@
     --color-input: rgba(0, 0, 0, 0.09);
     --color-ring: rgba(0, 0, 0, 0.26);
     --color-destructive: #ff3b30;
+    --navi-page-glow: rgba(255, 255, 255, 0.92);
+    --navi-page-gradient-start: #f8f8fa;
+    --navi-page-gradient-end: #f0f0f5;
 }
 
 @layer base {
@@ -37,14 +40,41 @@
         --navi-viewport-height: 100vh;
         --navi-viewport-offset-top: 0px;
         --navi-viewport-offset-left: 0px;
+        color-scheme: light dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-background: #111317;
+            --color-foreground: #f2f4f8;
+            --color-card: #191d22;
+            --color-card-foreground: #f2f4f8;
+            --color-popover: #171b20;
+            --color-popover-foreground: #f2f4f8;
+            --color-primary: #f2f4f8;
+            --color-primary-foreground: #111317;
+            --color-secondary: #252a31;
+            --color-secondary-foreground: #d8dde6;
+            --color-muted: #20252c;
+            --color-muted-foreground: #98a1ae;
+            --color-accent: #2a3038;
+            --color-accent-foreground: #f2f4f8;
+            --color-border: rgba(255, 255, 255, 0.1);
+            --color-input: rgba(255, 255, 255, 0.12);
+            --color-ring: rgba(255, 255, 255, 0.3);
+            --color-destructive: #ff6b5f;
+            --navi-page-glow: rgba(124, 147, 183, 0.16);
+            --navi-page-gradient-start: #181c22;
+            --navi-page-gradient-end: #0f1216;
+        }
     }
 
     html {
         overflow: hidden;
         overscroll-behavior: none;
         background:
-            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
-            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+            radial-gradient(circle at top, var(--navi-page-glow), transparent 34%),
+            linear-gradient(180deg, var(--navi-page-gradient-start) 0%, var(--navi-page-gradient-end) 100%);
     }
 
     body {
@@ -57,8 +87,8 @@
         margin: 0;
         overscroll-behavior: none;
         background:
-            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
-            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+            radial-gradient(circle at top, var(--navi-page-glow), transparent 34%),
+            linear-gradient(180deg, var(--navi-page-gradient-start) 0%, var(--navi-page-gradient-end) 100%);
     }
 
     body::after {
@@ -70,8 +100,8 @@
         height: env(safe-area-inset-bottom, 0px);
         pointer-events: none;
         background:
-            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
-            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+            radial-gradient(circle at top, var(--navi-page-glow), transparent 34%),
+            linear-gradient(180deg, var(--navi-page-gradient-start) 0%, var(--navi-page-gradient-end) 100%);
     }
 
     body,
@@ -90,8 +120,8 @@
         box-sizing: border-box;
         overscroll-behavior: none;
         background:
-            radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
-            linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+            radial-gradient(circle at top, var(--navi-page-glow), transparent 34%),
+            linear-gradient(180deg, var(--navi-page-gradient-start) 0%, var(--navi-page-gradient-end) 100%);
     }
 
     html[data-platform="ios"] {
@@ -157,7 +187,7 @@
     .shimmer {
         position: relative;
         color: transparent;
-        background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.72) 50%, transparent 100%);
+        background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--color-foreground) 45%, transparent) 50%, transparent 100%);
         background-size: 200% 100%;
         -webkit-background-clip: text;
         background-clip: text;

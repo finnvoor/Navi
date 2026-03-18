@@ -10,7 +10,18 @@
             min-height: 0;
             margin: 0;
             overflow: hidden;
-            background: linear-gradient(180deg, #faf8f2 0%, #f3efe7 100%);
+            color-scheme: light dark;
+            background:
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.92), transparent 34%),
+                linear-gradient(180deg, #f8f8fa 0%, #f0f0f5 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html, body, #root {
+                background:
+                    radial-gradient(circle at top, rgba(124, 147, 183, 0.16), transparent 34%),
+                    linear-gradient(180deg, #181c22 0%, #0f1216 100%);
+            }
         }
     </style>
     <link rel="stylesheet" href="app.css">
