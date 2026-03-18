@@ -6,6 +6,10 @@ An agent that can navigate, click, read, and fill forms in Safari on macOS.
 
 [Download the latest release](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip)
 
+## Inference Provider 
+
+Navi currently supports oauth sign in with ChatGPT Plus/Pro or Claude Pro/Max.
+
 ## Tools
 
 - **read_page** — Read the current page text, metadata, and interactive elements.
