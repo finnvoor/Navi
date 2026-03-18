@@ -1,8 +1,14 @@
 # Navi
 
+[<img align="left" width="64" height="64" alt="Icon" src="https://github.com/user-attachments/assets/1615b5bd-a23e-4fa3-acaa-94ec9f1b72c6" />](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip)
+
 An agent that can navigate, click, read, and fill forms in Safari on macOS.
 
 [Download the latest release](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip)
+
+## Inference Provider 
+
+Navi currently supports oauth sign in with ChatGPT Plus/Pro or Claude Pro/Max.
 
 ## Tools
 
