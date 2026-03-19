@@ -9,11 +9,9 @@
 	<br>
 </div>
 
-## Install
+[Download the latest release](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip) (_macOS 15+_)
 
-**macOS**: [Download the latest release](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip)
-
-**iOS and iPadOS**: [Join the TestFlight](https://testflight.apple.com/join/Ygg9BFYa)
+[Join the TestFlight](https://testflight.apple.com/join/Ygg9BFYa) (_iOS and iPadOS 18+_)
 
 ## Inference Provider 
 
