@@ -2,6 +2,11 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { SidebarApp } from "./app.jsx";
 
+syncViewportHeight();
+window.addEventListener("resize", syncViewportHeight);
+window.visualViewport?.addEventListener("resize", syncViewportHeight);
+window.visualViewport?.addEventListener("scroll", syncViewportHeight);
+
 // Wait for init data from the content script
 window.addEventListener(
     "message",
@@ -63,4 +68,11 @@ function boot(initData) {
         }
     });
     observer.observe(container, { childList: true, subtree: true });
+}
+
+function syncViewportHeight() {
+    const viewport = window.visualViewport;
+    const viewportHeight = viewport?.height ?? window.innerHeight;
+
+    document.documentElement.style.setProperty("--navi-viewport-height", `${viewportHeight}px`);
 }

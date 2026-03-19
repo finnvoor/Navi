@@ -30,6 +30,15 @@
         boxShadow: "-4px 0 24px rgba(0, 0, 0, 0.12)"
     });
 
+    function syncHostFrame() {
+        const viewport = window.visualViewport;
+        const viewportTop = viewport?.offsetTop ?? 0;
+        const viewportHeight = viewport?.height ?? window.innerHeight;
+
+        host.style.top = `${viewportTop}px`;
+        host.style.height = `${viewportHeight}px`;
+    }
+
     const iframe = document.createElement("iframe");
     Object.assign(iframe.style, {
         width: "100%",
@@ -61,6 +70,12 @@
     });
 
     host.appendChild(iframe);
+    syncHostFrame();
+
+    const syncHostFrameBound = () => syncHostFrame();
+    window.addEventListener("resize", syncHostFrameBound);
+    window.visualViewport?.addEventListener("resize", syncHostFrameBound);
+    window.visualViewport?.addEventListener("scroll", syncHostFrameBound);
 
     for (const evt of ["keydown", "keyup", "keypress"]) {
         host.addEventListener(evt, (e) => e.stopPropagation(), true);

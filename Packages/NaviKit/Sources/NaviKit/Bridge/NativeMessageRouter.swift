@@ -45,9 +45,11 @@ private extension NativeMessageRouter {
     }
 
     static func requestCheckForUpdates() async {
+        #if canImport(AppKit)
         UpdateRequestBridge.markPendingCheckForUpdates()
         DistributedNotificationCenter.default().post(name: UpdateRequestBridge.notificationName, object: nil)
         await openContainingApp()
+        #endif
     }
 
     static func openContainingApp() async {
