@@ -5,13 +5,15 @@
 		<b>An agent that can navigate, click, read, and fill forms in Safari on iOS, iPadOS, and macOS.</b>
 	</p>
 	<br>
-	<br>
-	<br>
 </div>
 
 [Download the latest release](https://github.com/finnvoor/Navi/releases/latest/download/Navi.zip) (_macOS 15+_)
 
 [Join the TestFlight](https://testflight.apple.com/join/Ygg9BFYa) (_iOS and iPadOS 18+_)
+
+---
+
+![Demo](https://github.com/user-attachments/assets/31b0d22b-e7e2-4324-9df1-2b24ad2b207e)
 
 ## Inference Provider 
 
